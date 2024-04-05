@@ -3,8 +3,9 @@
 
 #include "common.h"
 
-void render();
-void renderBg();
-void renderCharacters();
+extern void render();
+extern void renderBg();
+extern void renderHumans();
+extern void renderEnemies();
 
 #endif // RENDER_H

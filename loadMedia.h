@@ -5,7 +5,7 @@
 
 extern bool loadMedia();
 extern bool loadBg();
-extern bool loadCharacters();
+extern bool loadHumans();
 
 
 #endif // LOADMEDIA_H

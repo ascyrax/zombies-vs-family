@@ -5,6 +5,11 @@ SDL_Renderer *gRenderer = nullptr;
 const int SCREEN_WIDTH = 1920, SCREEN_HEIGHT = 1080;
 
 SDL_Texture *textureBg = nullptr; // texture for the background map
-SDL_Texture *textureChar01 = nullptr; // texture for the character01
+                                  // SDL_Texture *textureChar01 = nullptr; // texture for the character01
+std::vector<std::vector<SDL_Texture *>> texturesHumansIdle;
+std::vector<std::vector<SDL_Texture *>> texturesHumansWalk;
 
-int charW = 100, charH = 100; // width and height of the characters
+int charW = 100,
+    charH = 100; // width and height of the characters
+
+int frameNo = 0;
