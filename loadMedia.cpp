@@ -10,14 +10,24 @@ bool loadBg()
         return false;
     }
     textureBg = SDL_CreateTextureFromSurface(gRenderer, surfBg);
+
+    // free surface
+    SDL_FreeSurface(surfBg);
+    surfBg = nullptr;
     if (textureBg == NULL)
     {
         printf(":( could not generate texture from %s. error = %s\n", fileBg.c_str(), SDL_GetError());
         return false;
     }
-    // free surface
-    SDL_FreeSurface(surfBg);
-    surfBg = nullptr;
+
+    if (SDL_QueryTexture(textureBg, nullptr, nullptr, &MAP_WIDTH, &MAP_HEIGHT) != 0)
+    {
+        printf(":( could not get background map's height and width while sdl_querying its corresponding texture: %s\n", SDL_GetError());
+        return false;
+    }
+
+    mainCamera = new Camera();
+
     return true;
 }
 
@@ -61,7 +71,7 @@ bool loadHumansIdle()
 bool loadHumansWalk()
 {
     const int CNT_HUMANS = 4;
-    const int CNT_WALK_IMAGES = 6;
+    const int CNT_WALK_IMAGES = 8; // 0 to 7
 
     SDL_Surface *surfHumanWalk = nullptr;
 

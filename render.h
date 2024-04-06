@@ -3,9 +3,9 @@
 
 #include "common.h"
 
-extern void render();
-extern void renderBg();
-extern void renderHumans();
-extern void renderEnemies();
+extern bool render();
+extern bool renderBg();
+extern bool renderHumans();
+extern bool renderEnemies();
 
 #endif // RENDER_H

@@ -4,6 +4,7 @@
 #include "render.h"
 #include "close.h"
 #include "gameLoop.h"
+// #include "camera.h"
 
 
 int main()
@@ -22,6 +23,6 @@ int main()
     {
         runGameLoop();
     }
-    // close();
+    close();
     return 0;
 }

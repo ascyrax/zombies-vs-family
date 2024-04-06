@@ -1,26 +1,14 @@
 #include "human.h"
 
 std::vector<Human *> humans;
-// human
-// struct Human
-// {
-//     // constructor
-//     Human();
-//     // deconstructor
-//     ~Human();
-
-//     // member variables
-//     int x, y, w, h;
-//     SDL_Surface **surfaces;
-//     int surfaceCnt;
-// };
+const int humanW = 100, humanH= 100;
 
 Human::Human()
 {
     x = 500;
     y = 500;
-    w = 100;
-    h = 100;
+    w = humanW;
+    h = humanH;
     movToX = x;
     movToY = y;
     isHumanSelected = true; // todo: false by default

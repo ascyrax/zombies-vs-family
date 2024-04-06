@@ -19,5 +19,6 @@ bool init()
         printf(":( could not create the SDL_Renderer (gRenderer): %s\n", SDL_GetError());
         return false;
     }
+
     return true;
 }

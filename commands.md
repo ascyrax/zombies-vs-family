@@ -1,0 +1,1 @@
+g++ -std=c++17 main.cpp common.cpp init.cpp loadMedia.cpp render.cpp close.cpp gameLoop.cpp human.cpp debug.cpp `sdl2-config --cflags --libs` -I/opt/homebrew/include/SDL2/SDL_image.h -L/opt/homebrew/lib/ -lSDL2_image -I/opt/homebrew/include/SDL2/SDL_ttf.h -L/opt/homebrew/lib/ -lSDL2_ttf -I/opt/homebrew/include/SDL2/SDL_mixer.h -L/opt/homebrew/lib/ -lSDL2_mixer  && ./a.out

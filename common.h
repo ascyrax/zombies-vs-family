@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "debug.h"
 
 extern SDL_Window *gWindow;
 extern SDL_Renderer *gRenderer;
@@ -19,5 +20,24 @@ extern int charW, charH;
 
 extern std::vector<std::vector<SDL_Texture *>> texturesHumansIdle;
 extern std::vector<std::vector<SDL_Texture *>> texturesHumansWalk;
+
+// background map
+extern int MAP_WIDTH, MAP_HEIGHT;
+extern const int BG_ZOOM_FACTOR;
+
+struct Camera
+{
+    Camera();
+    ~Camera();
+
+    void updateSDLRect();
+
+    int x, y, w, h;
+    int moveSpeed;
+    SDL_Rect cameraRect;
+};
+
+// camera
+extern Camera *mainCamera;
 
 #endif // COMMON_H

@@ -22,6 +22,7 @@ struct Human
 };
 
 extern std::vector<Human *> humans;
+extern const int humanW, humanH;
 extern void createHuman();
 
 #endif // HUMANS_H
